@@ -41,12 +41,17 @@ def menu():
     """
 
     text = Text(logo)
+    dsc_gradient = Gradient(
+        "dsc.gg/voidtool",
+        colors=["red", "blue", "pink"],
+    )
     gradient_text = Gradient(
         text,
         colors=["#bababa", "gray"],
     )
     con.print(Align(gradient_text, align="center"))
-    con.print(Align("[#bababa]dsc.gg/voidtool", align="center"))
+    con.print(Align(dsc_gradient, align="center"))
+    con.line(2)
 
     table = Table(box=None)
     table.add_column("[0]", style="#bababa")

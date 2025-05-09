@@ -1,1 +1,4 @@
 /.venv
+/main.build
+/main.onefile-build
+/main.bin
