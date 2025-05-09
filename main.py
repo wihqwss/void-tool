@@ -11,6 +11,18 @@ from rich.table import Table
 from rich.panel import Panel
 from rich.text import Text
 from time import sleep
+import platform
+import sys
+import os
+
+# title
+def set_terminal_title(title):
+    if platform.system() == "Windows":
+        os.system(f'title {title}')
+    else:
+        sys.stdout.write(f"\33]0;{title}\a")
+        sys.stdout.flush()
+
 con = Console()
 
 from requests import post
@@ -26,7 +38,6 @@ def menu():
  ╚████╔╝ ╚██████╔╝██║██████╔╝██╗██║   ╚██████╔╝╚██████╔╝███████╗
   ╚═══╝   ╚═════╝ ╚═╝╚═════╝ ╚═╝╚═╝    ╚═════╝  ╚═════╝ ╚══════╝
                                                                 
-  
     """
 
     text = Text(logo)
@@ -35,6 +46,7 @@ def menu():
         colors=["#bababa", "gray"],
     )
     con.print(Align(gradient_text, align="center"))
+    con.print(Align("[#bababa]dsc.gg/voidtool", align="center"))
 
     table = Table(box=None)
     table.add_column("[0]", style="#bababa")
@@ -72,6 +84,7 @@ def spam_webhook():
 
 if __name__ == "__main__":
     menu()
+    set_terminal_title("dsc.gg/voidtool")
     option = Prompt.ask("[#bababa]Choose an option")
     if option == "1":
         spam_webhook()
