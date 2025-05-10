@@ -25,7 +25,7 @@ def set_terminal_title(title):
 
 con = Console()
 
-from requests import post
+import requests
 
 # Menu
 def menu():
@@ -78,14 +78,39 @@ def spam_webhook():
         message = Prompt.ask("[#bababa]Enter the message to spam:")
         con.clear()
         while True:
-                post(webhook_url, json={"content": ".gg/voidtool" + message})
+                requests.post(webhook_url, json={"content": ".gg/voidtool" + message})
                 con.print(f"[green][+] Message sent[/green]")
                 sleep(0.5)
     except KeyboardInterrupt:
         exit()
     
 
+# Function to delete webhook
+def delete_webhook():
+    con.clear()
+    webhook_url = Prompt.ask("[#bababa]Webhook URL")
+    con.print(f"[red]Deleting webhook...[/red]")
+    
+    response = requests.delete(webhook_url)
+    if response.status_code == 204:
+        con.print(f"[green][+] Webhook deleted successfully[/green]")
+    else:
+        con.print(f"[red]Failed to delete webhook[/red]")
+    sleep(1)
+    exit()
 
+# Function to validate webhook
+def valid_webhook():
+    con.clear()
+    webhook_url = Prompt.ask("[#bababa]Webhook URL")
+    
+    response = requests.get(webhook_url)
+    if response.status_code == 200:
+        con.print(f"[green][+] Webhook is working[/green]")
+    else:
+        con.print(f"[red][-]Unknown webhook/Deleted webhook[/red]")
+    sleep(1)
+    exit()
 
 if __name__ == "__main__":
     menu()
@@ -94,9 +119,9 @@ if __name__ == "__main__":
     if option == "1":
         spam_webhook()
     elif option == "2":
-        con.print("[red]Not implemented yet[/red]")
+        delete_webhook()
     elif option == "3":
-        con.print("[red]Not implemented yet[/red]")
+        valid_webhook()
     elif option == "4":
         con.print("[red]Not implemented yet[/red]")
     else:
