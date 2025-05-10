@@ -1,2 +1,3 @@
 import subprocess
-subprocess.run(["pip", "install", "-r", "requirements.txt"])
+def ir():
+    subprocess.run(["pip", "install", "-r", "requirements.txt"])

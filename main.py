@@ -1,3 +1,7 @@
+# air
+from util import air
+air.ir()
+
 # Traceback system
 from rich.traceback import install
 install(show_locals=True)
@@ -24,6 +28,7 @@ def set_terminal_title(title):
         sys.stdout.flush()
 
 con = Console()
+con.clear()
 
 import requests
 

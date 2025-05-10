@@ -24,7 +24,6 @@
 ```bash
 git clone https://github.com/wihqwss/void-tool.git
 cd void.tool
-pip install -r requirements.txt
 python3 main.py
 ```
 > You need **git** and **python** installed.
