@@ -4,7 +4,7 @@
 
 ---
 
-![void.tool screenshot](imgs/screenshot.png)
+![void.tool screenshot](screenshot.png)
 
 ## ✨ Features
 
