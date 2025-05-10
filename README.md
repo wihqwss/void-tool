@@ -1,9 +1,8 @@
 # void.tool
 
-**void.tool** is a simple and powerful command-line utility for working with Discord webhooks.  
-It allows you to validate, spam, or delete any given webhook.
+**void.tool** is a simple and powerful command-line utility for working with Discord.
 
-> ⚠️ Educational purposes only. Do not use this tool to violate Discord's Terms of Service.
+> ⚠️ This tool violates Discord's ToS.
 
 ---
 
