@@ -1,3 +1,7 @@
+# air
+from util import air
+air.ir()
+
 # Traceback system
 from rich.traceback import install
 install(show_locals=True)
@@ -24,6 +28,7 @@ def set_terminal_title(title):
         sys.stdout.flush()
 
 con = Console()
+con.clear()
 
 import requests
 
@@ -59,8 +64,8 @@ def menu():
     table.add_row("[1]", "Spam webhook", style="#bababa")
     table.add_row("[2]", "Delete webhook", style="#bababa")
     table.add_row("[3]", "Valid webhook", style="#bababa")
-    table.add_row("[4]", "Spam with bots (IN DEV)", style="#bababa")
-
+    # table.add_row("[4]", "Spam with bots (IN DEV)", style="#bababa")
+    table.add_row("[q]", "Quit", style="#bababa")
     choose_panel = Panel(
         table,
         title="Choose your option",
@@ -82,7 +87,8 @@ def spam_webhook():
                 con.print(f"[green][+] Message sent[/green]")
                 sleep(0.5)
     except KeyboardInterrupt:
-        exit()
+        con.clear()
+        menu()
     
 
 # Function to delete webhook
@@ -97,7 +103,8 @@ def delete_webhook():
     else:
         con.print(f"[red]Failed to delete webhook[/red]")
     sleep(1)
-    exit()
+    con.clear()
+    menu()
 
 # Function to validate webhook
 def valid_webhook():
@@ -110,7 +117,8 @@ def valid_webhook():
     else:
         con.print(f"[red][-] Unknown webhook/Deleted webhook | {response.status_code}[/red]")
     sleep(1)
-    exit()
+    con.clear()
+    menu()
 
 if __name__ == "__main__":
     menu()
@@ -124,5 +132,7 @@ if __name__ == "__main__":
         valid_webhook()
     elif option == "4":
         con.print("[red]Not implemented yet[/red]")
+    elif option == "q":
+        exit()
     else:
         con.print("[red]Invalid option[/red]")
