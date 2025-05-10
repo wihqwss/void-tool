@@ -65,7 +65,7 @@ def menu():
     table.add_row("[2]", "Delete webhook", style="#bababa")
     table.add_row("[3]", "Valid webhook", style="#bababa")
     # table.add_row("[4]", "Spam with bots (IN DEV)", style="#bababa")
-    table.add_row("[q]", "Quit", style="#bababa")
+    table.add_row("[0]", "Quit", style="#bababa")
     choose_panel = Panel(
         table,
         title="Choose your option",
@@ -132,7 +132,8 @@ if __name__ == "__main__":
         valid_webhook()
     elif option == "4":
         con.print("[red]Not implemented yet[/red]")
-    elif option == "q":
+    elif option == "0":
+        con.clear()
         exit()
     else:
         con.print("[red]Invalid option[/red]")
