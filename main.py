@@ -106,9 +106,9 @@ def valid_webhook():
     
     response = requests.get(webhook_url)
     if response.status_code == 200:
-        con.print(f"[green][+] Webhook is working[/green]")
+        con.print(f"[green][+] Webhook is working | {response.status_code}[/green]")
     else:
-        con.print(f"[red][-]Unknown webhook/Deleted webhook[/red]")
+        con.print(f"[red][-] Unknown webhook/Deleted webhook | {response.status_code}[/red]")
     sleep(1)
     exit()
 
