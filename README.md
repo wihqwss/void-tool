@@ -1,5 +1,3 @@
-# void.tool
-
 **void.tool** is a simple and powerful command-line utility for working with Discord.
 
 > ⚠️ This tool violates Discord's ToS.
