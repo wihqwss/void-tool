@@ -6,7 +6,7 @@
 
 ---
 
-![void.tool screenshot](imgs/void-tool-screenshot.png)
+![void.tool screenshot](imgs/screenshot.png)
 
 ## ✨ Features
 
@@ -18,6 +18,8 @@
 
 - ❌ **Delete Webhook**  
   Instantly delete a webhook from the server.
+  
+- (more features in the future!)
 
 ---
 
