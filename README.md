@@ -32,3 +32,7 @@ uv sync
 uv run main.py
 ```
 > You need **git**, **uv** and **python** installed.
+
+> Credits to:
+> @wihqwss for void.tool
+> @aiko-chan-ai for discord bot client

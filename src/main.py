@@ -11,6 +11,7 @@ from rich.table import Table
 from rich.panel import Panel
 from rich.text import Text
 from time import sleep
+import webbrowser
 import platform
 import sys
 import os
@@ -60,6 +61,7 @@ def menu():
     table.add_row("[1]", "Spam webhook", style="#bababa")
     table.add_row("[2]", "Delete webhook", style="#bababa")
     table.add_row("[3]", "Valid webhook", style="#bababa")
+    table.add_row("[4]", "Bot client", style="#bababa")
     # table.add_row("[4]", "Spam with bots (IN DEV)", style="#bababa")
     table.add_row("[0]", "Quit", style="#bababa")
     choose_panel = Panel(
@@ -127,7 +129,7 @@ if __name__ == "__main__":
     elif option == "3":
         valid_webhook()
     elif option == "4":
-        con.print("[red]Not implemented yet[/red]")
+        webbrowser.open("https://github.com/aiko-chan-ai/DiscordBotClient")
     elif option == "0":
         con.clear()
         exit()
