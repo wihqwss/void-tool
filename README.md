@@ -33,6 +33,6 @@ uv run main.py
 ```
 > You need **git**, **uv** and **python** installed.
 
-> Credits to:
-> @wihqwss for void.tool
-> @aiko-chan-ai for discord bot client
+## ✍️Credits to:
+- [@wihqwss](https://github.com/wihqwss/void-tool) for void.tool
+- [@aiko-chan-ai](https://github.com/aiko-chan-ai/DiscordBotClient) for discord bot client
