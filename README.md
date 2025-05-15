@@ -28,6 +28,7 @@
 ```bash
 git clone https://github.com/wihqwss/void-tool.git
 cd void.tool
-python3 main.py
+uv sync
+uv run main.py
 ```
-> You need **git** and **python** installed.
+> You need **git**, **uv** and **python** installed.

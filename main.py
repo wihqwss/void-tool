@@ -1,7 +1,3 @@
-# air
-from util import air
-air.ir()
-
 # Traceback system
 from rich.traceback import install
 install(show_locals=True)
@@ -122,7 +118,7 @@ def valid_webhook():
 
 if __name__ == "__main__":
     menu()
-    set_terminal_title("dsc.gg/voidtool")
+    set_terminal_title("dsc.gg/voidtool | 0.1.0")
     option = Prompt.ask("[#bababa]Choose an option")
     if option == "1":
         spam_webhook()
