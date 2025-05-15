@@ -1,7 +1,3 @@
-# air
-from util import air
-air.ir()
-
 # Traceback system
 from rich.traceback import install
 install(show_locals=True)
