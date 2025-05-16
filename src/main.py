@@ -118,6 +118,7 @@ def valid_webhook():
     con.clear()
     menu()
 
+
 if __name__ == "__main__":
     menu()
     set_terminal_title("dsc.gg/voidtool | 0.1.0")
