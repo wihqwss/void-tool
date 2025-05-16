@@ -116,7 +116,8 @@ def valid_webhook():
         con.print(f"[red][-] Unknown webhook/Deleted webhook | {response.status_code}[/red]")
     sleep(1)
     con.clear()
-    menu()
+    menu() 
+
 
 if __name__ == "__main__":
     menu()
